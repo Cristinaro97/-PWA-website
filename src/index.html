@@ -1,41 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="manifest.json">
-</head>
-<body>
+    <!-- <link rel="stylesheet" href="manifest.json" /> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <app class="app">
     <section class="signUp">
-        <form>
-            <label for="fname">First name:</label><br>
-            <input type="text" id="fname" name="fname"><br>
-            <label for="lname">Last name:</label><br>
-            <input type="text" id="lname" name="lname">
-            <button type="submit" id="buttonSignUp">SIGN UP</button>
-        </form>
-    </section>
-    <section class="signIn">
-        <form>
-            <label for="fname">First name:</label><br>
-            <input type="text" id="fname" name="fname"><br>
-            <label for="lname">Last name:</label><br>
-            <input type="text" id="lname" name="lname">
-            <button type="submit" id="buttonSignUp">SIGN UP</button>
-        </form>
-        <section class="webNotes">
-            <form>
-                <label for="fname">First name:</label><br>
-                <input type="text" id="fname" name="fname"><br>
-                <label for="lname">Last name:</label><br>
-                <input type="text" id="lname" name="lname">
-                <button type="submit" id="buttonSignUp">SIGN UP</button>
-            </form>
-        </section>
+      <h2>SIGN UP</h2>
+      <img class="imgUser"src="/home/cristina-ubuntu/Escritorio/PWA-website/src/images/user.svg" alt="user">
+      <form>
+        <label id="name" for="fname">Name</label><br />
+        <input type="text" id="fname" name="fname" required /><br />
+        <label id="password" for="lpassword">Password</label><br />
+        <input type="password" id="lpassword" name="lpassword" required />
+        <button type="submit" id="submitUserData" class="btnViewLogin">Sign Up</button>
+      </form>
+      <button class="btnViewLogin">Login</button>
+      <img class="imgUser"src="/home/cristina-ubuntu/Escritorio/PWA-website/src/images/background.svg" alt="background">
     </section>
 
-    <script src="src/index.js"></script>
-</body>
+    <section class="signIn">
+      <h2>LOGIN</h2>
+      <img class="imgUser"src="/home/cristina-ubuntu/Escritorio/PWA-website/src/images/user.svg" alt="user">
+      <form>
+        <label id="name" for="loginName">Name</label><br />
+        <input type="text" id="fname" name="fname" required /><br/>
+        <label id="password" for="loginPassword">Password</label><br/>
+        <input type="password" id="lpassword" name="lpassword" required />
+        <button type="submit" id="getUserData" class="btnViewnSignUp">Login</button>
+      </form>
+      <button class="btnViewnSignUp">Sign Up</button>
+      <img class="imgUser"src="/home/cristina-ubuntu/Escritorio/PWA-website/src/images/background.svg" alt="background">
+    </section>
+  
+    <section class="webNotes">
+        <form method="GET" id="my_form"></form> 
+        <table>
+            <tr>
+              <td><strong>Date</strong></td>
+              <td><strong>Note</strong></td>
+            </tr>
+            
+            <tr>
+              <td>CSS</td>
+              <td>20</td>
+              <td>16:00 - 20:00</td>
+            </tr> 
+            <tr>
+              <td>HTML</td>
+              <td>20</td>
+              <td>16:00 - 20:00</td>
+            </tr>
+            </table>
+            <img class="imgNotes"src="/home/cristina-ubuntu/Escritorio/PWA-website/src/images/notes.svg" alt="user">
+    </section>
+  </app>
+
+    <script type="module" src="./index.js"></script>
+  </body>
 </html>
